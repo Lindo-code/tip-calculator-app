@@ -1,18 +1,20 @@
 * {
   box-sizing: border-box;
 }
-.item {
+/*.item {
   border: 4px solid red;
   border-radius: 4px;
-}
+}*/
 body {
   background-color: hsl(172, 67%, 45%);
-  color: cyan;
+  color: cyan hsl(172, 67%, 45%);
+  font-family: Space Mono;
+  font-weight: bold;
   margin: 0;
 }
 .container {
   display: grid;
-  height: 100vh;
+  height: 100%;
   grid-template-rows: auto 1fr;
   grid-template-columns: auto;
   grid-template-areas:
@@ -22,11 +24,19 @@ body {
   "s1 b1 b1 b2"
   "a1 a1 a1 a1"
   "f1 f1 f1 f1";
-  grid-gap: 5px;
+  grid-gap: 10px;
 }
 .nested_container1 {
   display: grid;
-  height: 100vh;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-template-areas:
+  "j1 k1";
+  justify-items: center;
+  text-align: left;
+}
+.nested_container2 {
+  display: grid;
   grid-template-rows: auto;
   grid-template-columns: auto;
   grid-template-areas:
@@ -39,10 +49,12 @@ body {
 #one {
   display: inline-block;
   text-decoration: none;
+  text-align: left;
 }
 #two {
   display: inline-block;
   text-decoration: none;
+  text-align: left;
 }
 
 .navbar {
@@ -50,11 +62,75 @@ body {
 }
 .body {
   grid-area: b1;
-  background-color: grey;
+  background-color: white;
+  border-radius: 10px;
+  border: solid 1px hsl(172, 67%, 45%);
   padding: 0;
+}
+.first {
+  grid-area: j1;
+}
+.second {
+  grid-area: k1;
 }
 .bill {
   grid-area: c1;
+}
+.input1 {
+  color: cyan hsl(183, 100%, 15%);
+  background: hsl(185, 41%, 84%);
+  border-radius: 3px;
+  border: solid 1px hsl(172, 67%, 45%);
+  font-size: 25px;
+  font-family: Space Mono;
+  font-weight: bold;
+  padding: 1px;
+  text-align: right;
+  height: 2.5em;
+  width: 15em;
+}
+.input2 {
+  color: cyan hsl(183, 100%, 15%);
+  background: hsl(185, 41%, 84%);
+  border-radius: 3px;
+  border: solid 1px hsl(172, 67%, 45%);
+  font-size: 25px;
+  font-family: Space Mono;
+  font-weight: bold;
+  padding: 1px;
+  text-align: right;
+  height: 1em;
+  width: 1.5em;
+}
+.input3 {
+  color: cyan hsl(183, 100%, 15%);
+  background: hsl(185, 41%, 84%);
+  border-radius: 3px;
+  border: solid 1px hsl(172, 67%, 45%);
+  font-size: 25px;
+  font-family: Space Mono;
+  font-weight: bold;
+  padding: 2px;
+  text-align: right;
+  height: 2.5em;
+  width: 15em;
+}
+#myBtn1 {
+  color: cyan hsl(183, 100%, 15%);
+  background: hsl(172, 67%, 45%);
+  border: solid 3px hsl(172, 67%, 45%);
+  font-size: 15px;
+  font-family: Space Mono;
+  font-weight: bold;
+  padding: 2px;
+  text-align: center;
+  height: 3em;
+  width: 20em;
+}
+.nested_container3 {
+  color: cyan hsl(183, 100%, 15%);
+  background: hsl(184, 14%, 56%);
+  border-radius: 3px;
 }
 .tippercent {
   grid-area: d1;

@@ -9,6 +9,7 @@
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand|Sofia|Railway|Kumbh Sans|Playfair Display|Bodoni Moda|Lora|Jost|Space Mono">
   <link rel="stylesheet" href="Styling.css" />
   <script src="Calculator.js"></script>
 </head>
@@ -19,83 +20,89 @@
     </div>
     <div class="item body">
       <div class="item nested_container1">
-        <div class="item bill">
-          <p>
-            Bill
-          </p>
-          <input
-          class="input"
-          type="text"
-          title="calculator"
-          placeholder="Enter Ammount"
-          value="0"
-          oninput="calculator.billing(value)"
-          />
+        <div class="first">
+          <div class="item bill">
+            <p>
+              Bill
+            </p>
+            <input
+            class="input1"
+            type="text"
+            title="calculator"
+            placeholder="Enter Ammount"
+            value="0"
+            oninput="calculator.billing(value)"
+            />
+          </div>
+          <div class="item tippercent">
+            <p class="selectpercent">
+              Select Tip %
+            </p>
+            <ul class="percentages">
+              <li id="one">
+                <button onclick="calculator.calcTipPP(5)" id="myBtn" title="Go to top">5%
+                </button>
+              </li>
+              <li id="one">
+                <button onclick="calculator.calcTipPP(10)" id="myBtn" title="Go to top">10%
+                </button>
+              </li>
+              <li id="one">
+                <button onclick="calculator.calcTipPP(15)" id="myBtn" title="Go to top">15%
+                </button>
+              </li>
+              <li id="two">
+                <button onclick="calculator.calcTipPP(25)" id="myBtn" title="Go to top">25%
+                </button>
+              </li>
+              <li id="two">
+                <button onclick="calculator.calcTipPP(50)" id="myBtn" title="Go to top">50%
+                </button>
+              </li>
+              <li id="two">
+                <input
+                class="input2"
+                type="text"
+                title="calculator"
+                placeholder="Enter Tip Ammount"
+                value="40"
+                onchange="calculator.calcTipPP(value)"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="item people">
+            <p>
+              Number of People
+            </p>
+            <input
+            class="input3"
+            type="text"
+            title="calculator"
+            placeholder="Enter Number Of People"
+            value="1"
+            oninput="calculator.persons_(value)"
+            />
+          </div>
         </div>
-        <div class="item tippercent">
-          <p class="selectpercent">
-            Select Tip %
-          </p>
-          <ul class="percentages">
-            <li id="one">
-              <button onclick="calculator.calcTipPP(5)" id="myBtn" title="Go to top">5%
-              </button>
-            </li>
-            <li id="one">
-              <button onclick="calculator.calcTipPP(10)" id="myBtn" title="Go to top">10%
-              </button>
-            </li>
-            <li id="one">
-              <button onclick="calculator.calcTipPP(15)" id="myBtn" title="Go to top">15%
-              </button>
-            </li>
-            <li id="two">
-              <button onclick="calculator.calcTipPP(25)" id="myBtn" title="Go to top">25%
-              </button>
-            </li>
-            <li id="two">
-              <button onclick="calculator.calcTipPP(50)" id="myBtn" title="Go to top">50%
-              </button>
-            </li>
-            <li id="two">
-              <input
-              class="input"
-              type="text"
-              title="calculator"
-              placeholder="Enter Tip Ammount"
-              value="40"
-              onchange="calculator.calcTipPP(value)"
-              />
-            </li>
-          </ul>
-        </div>
-        <div class="item people">
-          <p>
-            Number of People
-          </p>
-          <input
-          class="input"
-          type="text"
-          title="calculator"
-          placeholder="Enter Number Of People"
-          value="1"
-          oninput="calculator.persons_(value)"
-          />
-        </div>
-        <div class="item tipAmmount">
-          <p>
-            Tip Amount<br>/ person
-          </p>
-          <span id="tAResult">0</span>
-        </div>
-        <div class="item total">
-          <p>
-            Total<br>/ person
-          </p>
-          <span id="tPResult">0</span>
-        </div>
-        <div class="item calculate">
-          <button onclick="calculator.calculate()" id="myBtn">CALCULATE TIP</button>
+        <div class="second">
+          <div class="item nested_container3">
+            <div class="item tipAmmount">
+              <p id="tipAmmount">
+                Tip Amount<br>/ person
+              </p>
+              <span id="tAResult">0</span>
+            </div>
+            <div class="item total">
+              <p id="total">
+                Total<br>/ person
+              </p>
+              <span id="tPResult">0</span>
+            </div>
+            <div class="item calculate">
+              <button onclick="calculator.calculate()" id="myBtn1">CALCULATE TIP</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
