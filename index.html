@@ -5,51 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link rel="stylesheet" href="Styling.css"/>
+  <link rel="stylesheet" href="Styling.css" />
+  <script src="Calculator.js"></script>
 </head>
 <body>
-  <div class="title">
-    <h4>SPLITTER</h4>
-  </div>
-  <div class="main">
-    <div class="left">
-      <div class="bill">
-        <p>Bill</p>
-      </div>
-      <div class="tippercent">
-        <p class="selectpercent">Select Tip %</p>
+  <div class="item container">
+    <div class="item navbar">
+      <h4>SPLITTER</h4>
+    </div>
+    <div class="item body">
+      <div class="item nested_container1">
+        <div class="item bill">
+          <p>
+            Bill
+          </p>
+          <input
+          class="input"
+          type="text"
+          title="calculator"
+          placeholder="Enter Ammount"
+          value="0"
+          oninput="calculator.billing(value)"
+          />
+        </div>
+        <div class="item tippercent">
+          <p class="selectpercent">
+            Select Tip %
+          </p>
           <ul class="percentages">
-            <li>5%</li>
-            <li>10%</li>
-            <li>15%</li>
-            <li>25%</li>
-            <li>50%</li>
-            <li class="own">Custom</li>
+            <li id="one">
+              <button onclick="calculator.calcTipPP(5)" id="myBtn" title="Go to top">5%
+              </button>
+            </li>
+            <li id="one">
+              <button onclick="calculator.calcTipPP(10)" id="myBtn" title="Go to top">10%
+              </button>
+            </li>
+            <li id="one">
+              <button onclick="calculator.calcTipPP(15)" id="myBtn" title="Go to top">15%
+              </button>
+            </li>
+            <li id="two">
+              <button onclick="calculator.calcTipPP(25)" id="myBtn" title="Go to top">25%
+              </button>
+            </li>
+            <li id="two">
+              <button onclick="calculator.calcTipPP(50)" id="myBtn" title="Go to top">50%
+              </button>
+            </li>
+            <li id="two">
+              <input
+              class="input"
+              type="text"
+              title="calculator"
+              placeholder="Enter Tip Ammount"
+              value="40"
+              onchange="calculator.calcTipPP(value)"
+              />
+            </li>
           </ul>
-      </div>
-      <div class="people">
-        <p>Number of People</p>
+        </div>
+        <div class="item people">
+          <p>
+            Number of People
+          </p>
+          <input
+          class="input"
+          type="text"
+          title="calculator"
+          placeholder="Enter Number Of People"
+          value="1"
+          oninput="calculator.persons_(value)"
+          />
+        </div>
+        <div class="item tipAmmount">
+          <p>
+            Tip Amount<br>/ person
+          </p>
+          <span id="tAResult">0</span>
+        </div>
+        <div class="item total">
+          <p>
+            Total<br>/ person
+          </p>
+          <span id="tPResult">0</span>
+        </div>
+        <div class="item calculate">
+          <button onclick="calculator.calculate()" id="myBtn">CALCULATE TIP</button>
+        </div>
       </div>
     </div>
-    <div class="right">
-      <div class="tipammount">
-        <p>Tip Amount<br>/ person</p>
-      </div>
-      <div class="total">
-        <p>Total<br>/ person</p>
-      </div>
-      <div class="reset">
-        <p>Reset</p><!--button-->
-      </div>
+    <div class="item footer">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
     </div>
-  </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
 </html>

@@ -1,3 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+.item {
+  border: 4px solid red;
+  border-radius: 4px;
+}
 body {
-  background-color: cyan hsl(172, 67%, 45%);
+  background-color: hsl(172, 67%, 45%);
+  color: cyan;
+  margin: 0;
+}
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto;
+  grid-template-areas:
+  "n1 n1 n1 n1"
+  "s1 b1 b1 b2"
+  "s1 b1 b1 b2"
+  "s1 b1 b1 b2"
+  "a1 a1 a1 a1"
+  "f1 f1 f1 f1";
+  grid-gap: 5px;
+}
+.nested_container1 {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-template-areas:
+  "c1 f1"
+  "d1 g1"
+  "e1 h1";
+  justify-items: center;
+  text-align: center;
+}
+#one {
+  display: inline-block;
+  text-decoration: none;
+}
+#two {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.navbar {
+  grid-area: n1;
+}
+.body {
+  grid-area: b1;
+  background-color: grey;
+  padding: 0;
+}
+.bill {
+  grid-area: c1;
+}
+.tippercent {
+  grid-area: d1;
+}
+.people {
+  grid-area: e1;
+}
+.tipAmmount {
+  grid-area: f1;
+}
+.total {
+  grid-area: g1;
+}
+.calculate {
+  grid-area: h1;
+}
+.footer {
+  grid-area: f1;
 }
