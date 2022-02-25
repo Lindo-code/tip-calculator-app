@@ -9,33 +9,44 @@
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="Styling.css"/>
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
+  <div class="title">
+    <h4>SPLITTER</h4>
+  </div>
+  <div class="main">
+    <div class="left">
+      <div class="bill">
+        <p>Bill</p>
+      </div>
+      <div class="tippercent">
+        <p class="selectpercent">Select Tip %</p>
+          <ul class="percentages">
+            <li>5%</li>
+            <li>10%</li>
+            <li>15%</li>
+            <li>25%</li>
+            <li>50%</li>
+            <li class="own">Custom</li>
+          </ul>
+      </div>
+      <div class="people">
+        <p>Number of People</p>
+      </div>
+    </div>
+    <div class="right">
+      <div class="tipammount">
+        <p>Tip Amount<br>/ person</p>
+      </div>
+      <div class="total">
+        <p>Total<br>/ person</p>
+      </div>
+      <div class="reset">
+        <p>Reset</p><!--button-->
+      </div>
+    </div>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
