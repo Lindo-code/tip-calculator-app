@@ -28,7 +28,7 @@ li {
   "s1 b1 b1 b2"
   "a1 a1 a1 a1"
   "f1 f1 f1 f1";
-  grid-row-gap: 10px;
+  grid-column-gap: 10em;
 }
 .nested_container1 {
   display: grid;
@@ -63,25 +63,27 @@ li {
 .symbol1 {
   text-align: right;
   margin-left: 3em;
-  font-size: 20px;
+  color: hsl(172, 67%, 45%);
+  font-size: 25px;
 }
 .symbol2 {
   text-align: right;
-  margin-left: 4em;
-  font-size: 20px;
+  margin-left: 3.8em;
+  color: hsl(172, 67%, 45%);
+  font-size: 25px;
 }
 #tAResult {
   text-align: left;
-  margin-left: 0.5em;
+  margin-left: 0.1em;
   color: hsl(172, 67%, 45%);
-  font-size: 20px;
+  font-size: 25px;
   padding: 20px;
 }
 #tPResult {
   text-align: left;
-  margin-left: 0.5em;
+  margin-left: 0.1em;
   color: hsl(172, 67%, 45%);
-  font-size: 20px;
+  font-size: 25px;
   padding: 20px;
 }
 p > #error0 {
@@ -95,21 +97,28 @@ p > #error1 {
 .navbar {
   grid-area: n1;
   text-align: center;
+  margin-bottom: 2em;
+  padding: 10px;
 }
 .body {
   grid-area: b1;
   background-color: white;
   border-radius: 10px;
-  /*border: solid 1px hsl(172, 67%, 45%);*/
+  border: solid 1px hsl(172, 67%, 45%);
   padding: 0;
   grid-column-gap: 5em;
+  margin-bottom: 3em;
 }
 .first {
   grid-area: j1;
+  grid-column-gap: 1em;
+  padding: 1em;
 }
 .second {
   grid-area: k1;
   grid-row-gap: 40px;
+  grid-column-gap: 1em;
+  padding: 1em;
 }
 .bill {
   grid-area: c1;
@@ -139,6 +148,8 @@ p > #error1 {
   text-align: center;
   height: 1.8em;
   width: 4em;
+  margin-left: -3em;
+  margin-bottom: 10px;
 }
 .input3 {
   color: cyan hsl(183, 100%, 15%);
@@ -166,6 +177,7 @@ p > #error1 {
   font-size: 15px;
   font-family: Space Mono;
   font-weight: bold;
+  margin-left: -3em;
 }
 #myBtn1 {
   color: cyan hsl(183, 100%, 15%);
@@ -180,8 +192,9 @@ p > #error1 {
   width: 15em;
 }
 .nested_container3 {
+  margin: 1.7em;
   color: cyan hsl(183, 100%, 15%);
-  background: hsl(184, 14%, 56%);
+  background: hsl(186, 14%, 43%);
   border-radius: 3px;
 }
 .white {
@@ -202,7 +215,7 @@ p > #error1 {
 .reset {
   grid-area: h1;
   padding: 1em;
-  margin: 2em;
+  margin: 2.5em;
 }
 .footer {
   grid-area: f1;
