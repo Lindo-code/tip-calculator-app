@@ -16,21 +16,21 @@
 <body>
   <div class="item container">
     <div class="item navbar">
-      <h4>SPLITTER</h4>
+      <img src="images/logo.svg" alt="">
     </div>
     <div class="item body">
       <div class="item nested_container1">
         <div class="first">
           <div class="item bill">
             <p>
-              Bill
+              Bill <span id="error0">"Bill Cannot Be Zero Or Empty"</span>
             </p>
             <input
             class="input1"
             type="text"
             title="calculator"
             placeholder="Enter Ammount"
-            value="0"
+            value=""
             oninput="calculator.billing(value)"
             />
           </div>
@@ -51,6 +51,8 @@
                 <button onclick="calculator.calcTipPP(15)" id="myBtn" title="Go to top">15%
                 </button>
               </li>
+            </ul>
+            <ul>
               <li id="two">
                 <button onclick="calculator.calcTipPP(25)" id="myBtn" title="Go to top">25%
                 </button>
@@ -64,8 +66,8 @@
                 class="input2"
                 type="text"
                 title="calculator"
-                placeholder="Enter Tip Ammount"
-                value="40"
+                placeholder="Custom"
+                value=""
                 onchange="calculator.calcTipPP(value)"
                 />
               </li>
@@ -73,14 +75,14 @@
           </div>
           <div class="item people">
             <p>
-              Number of People
+              Number of People <span id="error1">"Number Of People Cannot Be Zero Or Empty"</span>
             </p>
             <input
             class="input3"
             type="text"
             title="calculator"
-            placeholder="Enter Number Of People"
-            value="1"
+            placeholder="Enter Number"
+            value=""
             oninput="calculator.persons_(value)"
             />
           </div>
@@ -88,19 +90,25 @@
         <div class="second">
           <div class="item nested_container3">
             <div class="item tipAmmount">
-              <p id="tipAmmount">
-                Tip Amount<br>/ person
-              </p>
-              <span id="tAResult">0</span>
+              <ul>
+                <li><p id="tipAmmount">
+                  <span class="white">Tip Amount</span><br>/ person
+                </p>
+                </li>
+                <li><span class="symbol1">R</span><span id="tAResult">0</span></li>
+              </ul>
             </div>
             <div class="item total">
-              <p id="total">
-                Total<br>/ person
-              </p>
-              <span id="tPResult">0</span>
+              <ul>
+                <li><p id="total">
+                  <span class="white">Total</span><br>/ person
+                </p>
+                </li>
+                <li><span class="symbol2">R</span><span id="tPResult">0</span></li>
+              </ul>
             </div>
-            <div class="item calculate">
-              <button onclick="calculator.calculate()" id="myBtn1">CALCULATE TIP</button>
+            <div class="item reset">
+              <button onclick="calculator.reset()" id="myBtn1">RESET</button>
             </div>
           </div>
         </div>
@@ -108,7 +116,7 @@
     </div>
     <div class="item footer">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Lindo-code</a>.
     </div>
   </div>
 </body>

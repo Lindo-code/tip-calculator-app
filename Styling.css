@@ -6,11 +6,15 @@
   border-radius: 4px;
 }*/
 body {
-  background-color: hsl(172, 67%, 45%);
+  background-color: hsl(185, 41%, 84%);
   color: cyan hsl(172, 67%, 45%);
   font-family: Space Mono;
   font-weight: bold;
   margin: 0;
+}
+li {
+  text-decoration: none;
+  display: inline-block;
 }
 .container {
   display: grid;
@@ -24,7 +28,7 @@ body {
   "s1 b1 b1 b2"
   "a1 a1 a1 a1"
   "f1 f1 f1 f1";
-  grid-gap: 10px;
+  grid-row-gap: 10px;
 }
 .nested_container1 {
   display: grid;
@@ -56,22 +60,56 @@ body {
   text-decoration: none;
   text-align: left;
 }
-
+.symbol1 {
+  text-align: right;
+  margin-left: 3em;
+  font-size: 20px;
+}
+.symbol2 {
+  text-align: right;
+  margin-left: 4em;
+  font-size: 20px;
+}
+#tAResult {
+  text-align: left;
+  margin-left: 0.5em;
+  color: hsl(172, 67%, 45%);
+  font-size: 20px;
+  padding: 20px;
+}
+#tPResult {
+  text-align: left;
+  margin-left: 0.5em;
+  color: hsl(172, 67%, 45%);
+  font-size: 20px;
+  padding: 20px;
+}
+p > #error0 {
+  display: none;
+  color: red;
+}
+p > #error1 {
+  display: none;
+  color: red;
+}
 .navbar {
   grid-area: n1;
+  text-align: center;
 }
 .body {
   grid-area: b1;
   background-color: white;
   border-radius: 10px;
-  border: solid 1px hsl(172, 67%, 45%);
+  /*border: solid 1px hsl(172, 67%, 45%);*/
   padding: 0;
+  grid-column-gap: 5em;
 }
 .first {
   grid-area: j1;
 }
 .second {
   grid-area: k1;
+  grid-row-gap: 40px;
 }
 .bill {
   grid-area: c1;
@@ -81,39 +119,53 @@ body {
   background: hsl(185, 41%, 84%);
   border-radius: 3px;
   border: solid 1px hsl(172, 67%, 45%);
-  font-size: 25px;
+  font-size: 20px;
   font-family: Space Mono;
   font-weight: bold;
   padding: 1px;
   text-align: right;
-  height: 2.5em;
-  width: 15em;
+  height: 1.5em;
+  width: 12em;
 }
 .input2 {
   color: cyan hsl(183, 100%, 15%);
   background: hsl(185, 41%, 84%);
   border-radius: 3px;
   border: solid 1px hsl(172, 67%, 45%);
-  font-size: 25px;
+  font-size: 15px;
   font-family: Space Mono;
   font-weight: bold;
   padding: 1px;
-  text-align: right;
-  height: 1em;
-  width: 1.5em;
+  text-align: center;
+  height: 1.8em;
+  width: 4em;
 }
 .input3 {
   color: cyan hsl(183, 100%, 15%);
   background: hsl(185, 41%, 84%);
   border-radius: 3px;
   border: solid 1px hsl(172, 67%, 45%);
-  font-size: 25px;
+  font-size: 20px;
   font-family: Space Mono;
   font-weight: bold;
   padding: 2px;
   text-align: right;
-  height: 2.5em;
-  width: 15em;
+  height: 1.5em;
+  width: 12em;
+}
+#myBtn {
+  color: cyan hsl(183, 100%, 15%);
+  background: hsl(172, 67%, 45%);
+  border: solid hsl(172, 67%, 45%);
+  border-radius: 3px;
+  padding: 2px;
+  text-align: center;
+  margin-right: 3em;
+  height: 1.8em;
+  width: 4em;
+  font-size: 15px;
+  font-family: Space Mono;
+  font-weight: bold;
 }
 #myBtn1 {
   color: cyan hsl(183, 100%, 15%);
@@ -125,12 +177,15 @@ body {
   padding: 2px;
   text-align: center;
   height: 3em;
-  width: 20em;
+  width: 15em;
 }
 .nested_container3 {
   color: cyan hsl(183, 100%, 15%);
   background: hsl(184, 14%, 56%);
   border-radius: 3px;
+}
+.white {
+  color: white;
 }
 .tippercent {
   grid-area: d1;
@@ -144,8 +199,10 @@ body {
 .total {
   grid-area: g1;
 }
-.calculate {
+.reset {
   grid-area: h1;
+  padding: 1em;
+  margin: 2em;
 }
 .footer {
   grid-area: f1;
