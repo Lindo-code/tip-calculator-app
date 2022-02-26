@@ -1,4 +1,5 @@
 # Frontend Mentor - Tip calculator app
+https://lindo-code.github.io/tip-calculator-app/
 
 ![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
 
