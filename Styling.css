@@ -166,9 +166,9 @@ p > #error1 {
   width: 12em;
 }
 #myBtn {
-  color: cyan hsl(183, 100%, 15%);
-  background: hsl(172, 67%, 45%);
-  border: solid hsl(172, 67%, 45%);
+  color: white;
+  background: hsl(183, 100%, 15%);
+  border: solid hsl(183, 100%, 15%);
   border-radius: 3px;
   padding: 2px;
   text-align: center;
@@ -196,7 +196,7 @@ p > #error1 {
 .nested_container3 {
   margin: 1.7em;
   color: cyan hsl(183, 100%, 15%);
-  background: hsl(186, 14%, 43%);
+  background: hsl(183, 100%, 15%);
   border-radius: 3px;
 }
 .white {
@@ -222,6 +222,14 @@ p > #error1 {
 }
 .footer {
   grid-area: f1;
+}
+#myBtn:hover {
+
+  color: black;
+  background: hsl(172, 67%, 45%);
+  border: solid hsl(172, 67%, 45%);
+  font-weight: bold;
+
 }
 @media screen and (min-width: 968px) {
   .container {
