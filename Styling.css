@@ -95,6 +95,10 @@ p > #error1 {
   display: none;
   color: red;
 }
+span > #currency {
+  font-weight: bold;
+  color: white;
+}
 .navbar {
   grid-area: n1;
   text-align: center;
@@ -135,7 +139,7 @@ p > #error1 {
   padding: 1px;
   text-align: right;
   height: 1.5em;
-  width: 12em;
+  width: 10em;
 }
 .input2 {
   color: cyan hsl(183, 100%, 15%);
@@ -163,7 +167,8 @@ p > #error1 {
   padding: 2px;
   text-align: right;
   height: 1.5em;
-  width: 12em;
+  width: 10em;
+  width: 10em;
 }
 #myBtn {
   color: white;
