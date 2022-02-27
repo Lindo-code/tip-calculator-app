@@ -28,14 +28,15 @@ li {
   "s1 b1 b1 b2"
   "a1 a1 a1 a1"
   "f1 f1 f1 f1";
-  grid-column-gap: 10em;
+  grid-column-gap: 2em;
 }
 .nested_container1 {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: auto;
   grid-template-areas:
-  "j1 k1";
+  "j1"
+  "k1";
   justify-items: center;
   text-align: left;
 }
@@ -62,13 +63,13 @@ li {
 }
 .symbol1 {
   text-align: right;
-  margin-left: 3em;
+  margin-left: 2.9em;
   color: hsl(172, 67%, 45%);
   font-size: 25px;
 }
 .symbol2 {
   text-align: right;
-  margin-left: 3.8em;
+  margin-left: 3.9em;
   color: hsl(172, 67%, 45%);
   font-size: 25px;
 }
@@ -76,14 +77,14 @@ li {
   text-align: left;
   margin-left: 0.1em;
   color: hsl(172, 67%, 45%);
-  font-size: 25px;
+  font-size: 24px;
   padding: 20px;
 }
 #tPResult {
   text-align: left;
   margin-left: 0.1em;
   color: hsl(172, 67%, 45%);
-  font-size: 25px;
+  font-size: 24px;
   padding: 20px;
 }
 p > #error0 {
@@ -182,14 +183,15 @@ p > #error1 {
 #myBtn1 {
   color: cyan hsl(183, 100%, 15%);
   background: hsl(172, 67%, 45%);
-  border: solid 3px hsl(172, 67%, 45%);
-  font-size: 15px;
+  border: solid hsl(172, 67%, 45%);
+  border-radius: 3px;
+  font-size: 24px;
   font-family: Space Mono;
   font-weight: bold;
   padding: 2px;
   text-align: center;
-  height: 3em;
-  width: 15em;
+  height: 2em;
+  width: 10em;
 }
 .nested_container3 {
   margin: 1.7em;
@@ -214,9 +216,35 @@ p > #error1 {
 }
 .reset {
   grid-area: h1;
-  padding: 1em;
+  padding: 0.5em;
   margin: 2.5em;
+
 }
 .footer {
   grid-area: f1;
+}
+@media screen and (min-width: 968px) {
+  .container {
+    display: grid;
+    height: 100%;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "n1 n1 n1 n1"
+    "s1 b1 b1 b2"
+    "s1 b1 b1 b2"
+    "s1 b1 b1 b2"
+    "a1 a1 a1 a1"
+    "f1 f1 f1 f1";
+    grid-column-gap: 10em;
+  }
+  .nested_container1 {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "j1 k1";
+    justify-items: center;
+    text-align: left;
+  }
 }
