@@ -63,13 +63,13 @@ li {
 }
 .symbol1 {
   text-align: right;
-  margin-left: 2.9em;
+  margin-left: 2.2em;
   color: hsl(172, 67%, 45%);
   font-size: 25px;
 }
 .symbol2 {
   text-align: right;
-  margin-left: 3.9em;
+  margin-left: 3em;
   color: hsl(172, 67%, 45%);
   font-size: 25px;
 }
@@ -78,14 +78,14 @@ li {
   margin-left: 0.1em;
   color: hsl(172, 67%, 45%);
   font-size: 24px;
-  padding: 20px;
+  padding: 5px;
 }
 #tPResult {
   text-align: left;
   margin-left: 0.1em;
   color: hsl(172, 67%, 45%);
   font-size: 24px;
-  padding: 20px;
+  padding: 5px;
 }
 p > #error0 {
   display: none;
@@ -188,7 +188,7 @@ p > #error1 {
   font-size: 24px;
   font-family: Space Mono;
   font-weight: bold;
-  padding: 2px;
+  padding: 5px;
   text-align: center;
   height: 2em;
   width: 10em;
