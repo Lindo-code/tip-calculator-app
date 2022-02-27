@@ -141,6 +141,10 @@ span > #currency {
   height: 1.5em;
   width: 10em;
 }
+.percentages {
+  margin-left: 24px;
+  margin-right: -16px;
+}
 .input2 {
   color: cyan hsl(183, 100%, 15%);
   background: hsl(185, 41%, 84%);
