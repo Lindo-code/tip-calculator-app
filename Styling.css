@@ -18,7 +18,6 @@ li {
 }
 .container {
   display: grid;
-  max-width: 100vw;
   height: 100%;
   grid-template-rows: auto 1fr;
   grid-template-columns: auto;
@@ -30,6 +29,7 @@ li {
   "a1 a1 a1 a1"
   "f1 f1 f1 f1";
   grid-column-gap: 2em;
+  padding: 2em 2em 2em 0.5em;
 }
 .nested_container1 {
   display: grid;
@@ -38,7 +38,7 @@ li {
   grid-template-areas:
   "j1"
   "k1";
-  justify-items: center;
+  justify-items: left;
   text-align: left;
 }
 .nested_container2 {
@@ -49,7 +49,7 @@ li {
   "c1 f1"
   "d1 g1"
   "e1 h1";
-  justify-items: center;
+  justify-items: left;
   text-align: center;
 }
 #one {
@@ -64,28 +64,28 @@ li {
 }
 .symbol1 {
   text-align: right;
-  margin-left: 2.2em;
+  margin-left: 0.5em;
   color: hsl(172, 67%, 45%);
-  font-size: 25px;
+  font-size: 23px;
 }
 .symbol2 {
   text-align: right;
-  margin-left: 3em;
+  margin-left: 0.5em;
   color: hsl(172, 67%, 45%);
-  font-size: 25px;
+  font-size: 23px;
 }
 #tAResult {
   text-align: left;
   margin-left: 0.1em;
   color: hsl(172, 67%, 45%);
-  font-size: 24px;
+  font-size: 22px;
   padding: 5px;
 }
 #tPResult {
   text-align: left;
   margin-left: 0.1em;
   color: hsl(172, 67%, 45%);
-  font-size: 24px;
+  font-size: 22px;
   padding: 5px;
 }
 p > #error0 {
@@ -108,6 +108,7 @@ span > #currency {
 }
 .body {
   grid-area: b1;
+  width: 85vw;
   background-color: white;
   border-radius: 10px;
   border: solid 1px hsl(172, 67%, 45%);
@@ -117,14 +118,16 @@ span > #currency {
 }
 .first {
   grid-area: j1;
-  grid-column-gap: 1em;
-  padding: 1em;
+  padding: 1vw;
+  justify-self: center;
+  align-self: center;
 }
 .second {
   grid-area: k1;
-  grid-row-gap: 40px;
-  grid-column-gap: 1em;
-  padding: 1em;
+  grid-column-gap: 1vw;
+  padding: 1vw;
+  justify-self: center;
+  align-self: center;
 }
 .bill {
   grid-area: c1;
@@ -173,7 +176,6 @@ span > #currency {
   text-align: right;
   height: 1.5em;
   width: 10em;
-  width: 10em;
 }
 #myBtn {
   color: white;
@@ -201,7 +203,7 @@ span > #currency {
   padding: 5px;
   text-align: center;
   height: 2em;
-  width: 10em;
+  width: 6em;
 }
 .nested_container3 {
   margin: 1.7em;
@@ -244,7 +246,6 @@ span > #currency {
 @media screen and (min-width: 968px) {
   .container {
     display: grid;
-    max-width: 100vw;
     height: 100%;
     grid-template-rows: auto 1fr;
     grid-template-columns: auto;
@@ -256,9 +257,32 @@ span > #currency {
     "a1 a1 a1 a1"
     "f1 f1 f1 f1";
     grid-column-gap: 2em;
+    margin: 2em;
   }
   .body {
-    max-width: 90vw;
+    width: 80vw;
+    justify-self: center;
+    align-self: center;
+  }
+  .symbol1 {
+    margin-left: 2em;
+    font-size: 25px;
+  }
+  .symbol2 {
+    margin-left: 2em;
+    font-size: 25px;
+  }
+  #tPResult {
+    font-size: 24px;
+  }
+  #tAResult {
+    font-size: 24px;
+  }
+  .second {
+    margin-right: -2em;
+  }
+  #myBtn1 {
+    width: 10em;
   }
   .nested_container1 {
     display: grid;
