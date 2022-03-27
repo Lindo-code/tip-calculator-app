@@ -29,6 +29,7 @@ li {
   "a1 a1 a1 a1"
   "f1 f1 f1 f1";
   grid-column-gap: 2em;
+  margin: 4em;
 }
 .nested_container1 {
   display: grid;
@@ -253,7 +254,8 @@ span > #currency {
     "s1 b1 b1 b2"
     "a1 a1 a1 a1"
     "f1 f1 f1 f1";
-    grid-column-gap: 10em;
+    grid-column-gap: 2em;
+    margin: 4em;
   }
   .body {
     max-width: 90vw;
