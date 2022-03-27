@@ -19,7 +19,7 @@
         <div class="first">
           <div class="item bill">
             <p>
-              Bill <span id="error0">"Must Enter An Ammount Greater Than Zero"</span>
+              Bill <span id="error0">Please Enter A Number Greater Than Zero</span>
             </p>
             <span style="font-weight: bold; color:grey;">R</span>
             <input
@@ -65,14 +65,14 @@
                 title="calculator"
                 placeholder="Custom"
                 value=""
-                onchange="calculator.calcTipPP(value)"
+                oninput="calculator.calcTipPP(value)"
                 />
               </li>
             </ul>
           </div>
           <div class="item people">
             <p>
-              Number of People <span id="error1">"Must Enter A Number Greater Than One"</span>
+              Number of People <span id="error1">Please Enter A Number Greater Than One</span>
             </p>
             <img src="images/icon-person.svg" alt="" />
             <input
@@ -106,7 +106,7 @@
               </ul>
             </div>
             <div class="item reset">
-              <button onclick="calculator.reset()" id="myBtn1">RESET</button>
+              <button onclick="calculator.resetResults()" id="myBtn1">RESET</button>
             </div>
           </div>
         </div>
