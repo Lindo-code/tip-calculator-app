@@ -29,7 +29,7 @@ li {
   "a1 a1 a1 a1"
   "f1 f1 f1 f1";
   grid-column-gap: 2em;
-  padding: 2em 2em 2em 0.5em;
+  padding: 2em 2em 2em 0.3em;
 }
 .nested_container1 {
   display: grid;

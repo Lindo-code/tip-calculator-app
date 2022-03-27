@@ -10,13 +10,18 @@ class Tipcalculator {
     const element0 = document.getElementById("error0");
     this.bill = value1;
     element0.style.display = (isNaN(this.bill) && this.bill.length !== 0 || this.bill < 1 && this.bill.length !== 0) ? "block" : "none";
+    this.resetResults();
   }
   persons_(value3) {
     const element = document.getElementById("error1");
     this.persons = value3;
-    element.style.display = (isNaN(this.persons) && this.bill.length !== 0|| this.persons < 2 && this.persons.length !== 0) ? "block" : "none";
+    element.style.display = (isNaN(this.persons) && this.persons.length !== 0 || this.persons < 2 && this.persons.length !== 0) ? "block" : "none";
+    this.resetResults();
   }
   calcTipPP(num) {
+    if(num < 1 || isNaN(num)) {
+      return this.resetResults();
+    }
     this.tip = num;
     this.tipAmmount = (this.bill * this.tip)/100;
     this.tipAmmount = this.tipAmmount/this.persons;
@@ -46,7 +51,7 @@ class Tipcalculator {
     this.total = Number(this.total.toString().replace(/(?<=\.\d\d).*/, ""));
     return isNaN(this.total) ? 0 : this.total;
   }
-  reset() {
+  resetResults() {
     const element1 = document.getElementById('tAResult');
     const element2 = document.getElementById('tPResult');
     element1.innerText = 0;
@@ -54,7 +59,3 @@ class Tipcalculator {
   }
 }
 const calculator = new Tipcalculator();
-/*calculator.billing(10)
-calculator.persons_(3)
-calculator.calcTipPP(50)
-console.log(calculator)*/
