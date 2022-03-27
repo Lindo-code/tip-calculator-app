@@ -9,12 +9,12 @@ class Tipcalculator {
   billing(value1) {
     const element0 = document.getElementById("error0");
     this.bill = value1;
-    element0.style.display = (isNaN(this.bill) || this.bill < 1) ? "block" : "none";
+    element0.style.display = (isNaN(this.bill) && this.bill.length !== 0 || this.bill < 1 && this.bill.length !== 0) ? "block" : "none";
   }
   persons_(value3) {
     const element = document.getElementById("error1");
     this.persons = value3;
-    element.style.display = (isNaN(this.persons) || this.persons < 1) ? "block" : "none";
+    element.style.display = (isNaN(this.persons) && this.bill.length !== 0|| this.persons < 2 && this.persons.length !== 0) ? "block" : "none";
   }
   calcTipPP(num) {
     this.tip = num;
