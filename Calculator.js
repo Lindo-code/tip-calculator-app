@@ -9,30 +9,26 @@ class Tipcalculator {
   billing(value1) {
     const element0 = document.getElementById("error0");
     this.bill = value1;
-    if (element0.style.display === "block") {
-      element0.style.display = "none";
-    }
+    element0.style.display = (isNaN(this.bill) || this.bill < 1) ? "block" : "none";
   }
   persons_(value3) {
     const element = document.getElementById("error1");
     this.persons = value3;
-    if (element.style.display === "block") {
-      element.style.display = "none";
-    }
+    element.style.display = (isNaN(this.persons) || this.persons < 1) ? "block" : "none";
   }
   calcTipPP(num) {
     this.tip = num;
     this.tipAmmount = (this.bill * this.tip)/100;
     this.tipAmmount = this.tipAmmount/this.persons;
     this.tipAmmount = Number(this.tipAmmount.toString().replace(/(?<=\.\d\d).*/, ""));
-    this.total = this.calcTotalPP(this.tipAmmount);
+    this.total = isNaN(this.calcTotalPP(this.tipAmmount)) ? 0 :this.calcTotalPP(this.tipAmmount);
     const element = document.getElementById("error1");
     const element0 = document.getElementById("error0");
 
-    if (this.bill === 0 || this.bill === NaN || this.bill === "") {
+    if (this.bill < 1 || isNaN(this.bill) || this.bill === "") {
       element0.style.display = "block";
     }
-    if (this.persons === 0 || this.persons === NaN || this.persons === "") {
+    if (this.persons < 1 || isNaN(this.persons) || this.persons === "") {
       element.style.display = "block";
     } else {
       if (element0.style.display === "block" || element.style.display === "block") {
@@ -48,7 +44,7 @@ class Tipcalculator {
   calcTotalPP(roundToTwo) {
     this.total = (this.bill/this.persons) + roundToTwo;
     this.total = Number(this.total.toString().replace(/(?<=\.\d\d).*/, ""));
-    return this.total;
+    return isNaN(this.total) ? 0 : this.total;
   }
   reset() {
     const element1 = document.getElementById('tAResult');

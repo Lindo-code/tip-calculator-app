@@ -255,6 +255,9 @@ span > #currency {
     "f1 f1 f1 f1";
     grid-column-gap: 10em;
   }
+  .body {
+    max-width: 90vw;
+  }
   .nested_container1 {
     display: grid;
     grid-template-rows: auto;
