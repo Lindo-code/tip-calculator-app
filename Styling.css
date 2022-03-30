@@ -279,7 +279,10 @@ span > #currency {
     font-size: 24px;
   }
   .second {
+    display: flex;
     margin-right: -2em;
+    align-self: center;
+    justify-self: center;
   }
   #myBtn1 {
     width: 10em;
